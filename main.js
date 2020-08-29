@@ -1,6 +1,6 @@
 function fetchIssues() {
-  const issues = JSON.parse(localStorage.getItem('issues'));
-  const issuesList = document.getElementById('issuesList');
+  let issues = JSON.parse(localStorage.getItem('issues'));
+  let issuesList = document.getElementById('issuesList');
 
   issuesList.innerHTML = '';
 
@@ -24,21 +24,23 @@ function fetchIssues() {
       '</h3>' +
       '<p><span class="glyphicon glyphicon-time"></span> ' +
       severity +
-      ' ' +
-      '<span class="glyphicon glyphicon-user"></span> ' +
+      '</p>' +
+      '<p><span class="glyphicon glyphicon-user"></span> ' +
       assignedTo +
       '</p>' +
-      '<a href="#" class="btn btn-warning" onclick="setStatusClosed(\'' +
+      '<a href="#" onclick="setStatusClosed(\'' +
       id +
-      '\')">Close</a> ' +
-      '<a href="#" class="btn btn-danger" onclick="deleteIssue(\'' +
+      '\')" class="btn btn-warning">Close</a> ' +
+      '<a href="#" onclick="deleteIssue(\'' +
       id +
-      '\')">Delete</a>' +
+      '\')" class="btn btn-danger">Delete</a>' +
       '</div>';
   }
 }
 
-Document.getElementById('issueInputForm').addEventListener('submit', saveIssue);
+document
+  .getElementById('issueInputForm')
+  .addEventListener('submit', saveIssue);
 
 function saveIssue(e) {
   let issueId = chance.guid();
@@ -46,13 +48,14 @@ function saveIssue(e) {
   let issueSeverity = document.getElementById('issueSeverityInput').value;
   let issueAssignedTo = document.getElementById('issueAssignedToInput').value;
   let issueStatus = 'Open';
+  
   let issue = {
     id: issueId,
     description: issueDesc,
     severity: issueSeverity,
     assignedTo: issueAssignedTo,
     status: issueStatus,
-  };
+  }
 
   if (localStorage.getItem('issues') === null) {
     let issues = [];
@@ -76,7 +79,7 @@ function setStatusClosed (id) {
 
   for (let i = 0; i < issues.length; i++) {
     if (issues[i].id == id) {
-      issues[i].status = "closed";
+      issues[i].status = "Closed";
     }
   }
 
