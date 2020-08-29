@@ -20,29 +20,32 @@
   </head>
   <body onload="fetchIssues()">
     <div class="container">
-      <h1>A JavaScript CRUD Bug Tracker</h1>
-      <div class="jumbotron">
+      <h1 class="mt-3">A JavaScript CRUD Bug Tracker</h1>
+      <div class="jumbotron mt-3">
         <h3>Add New Issue:</h3>
         <form id="issueInputForm">
           <div class="form-group">
-            <label for="issueDescInput">Description</label>
-            <input
+            <label for="issueDescInput">Description:</label>
+            <textarea
               type="text"
               class="form-control"
               id="issueDescInput"
               placeholder="Describe the issue ..."
-            />
+            /></textarea>
           </div>
+
           <div class="form-group">
-            <label for="issueDescInput">Severity</label>
+            <label for="issueSeverityInput">Severity:</label>
+
             <select class="form-control" id="issueSeverityInput">
               <option value="Low">Low</option>
               <option value="Medium">Medium</option>
               <option value="High">High</option>
             </select>
           </div>
+          
           <div class="form-group">
-            <label for="issueDescInput">Assigned To</label>
+            <label for="issueDescInput">Assigned To:</label>
             <input
               type="text"
               class="form-control"
@@ -50,15 +53,18 @@
               placeholder="Enter responsible ..."
             />
           </div>
+
           <button type="submit" class="btn btn-primary">Add</button>
         </form>
       </div>
-      <div class="row">
-        <div class="col-lg-12">
+    </div>
+
+      <div class="row mt-3">
+        <div class="col-lg-10 offset-1" style="background-color: #EAECEF; border-radius: 5px;">
           <div id="issuesList"></div>
         </div>
       </div>
-      <div class="footer">
+      <div class="footer mt-5 offset-1">
         <p>View my portfolio @ <a href="https://ajb.app">ajb.app</a></p>
       </div>
     </div>
