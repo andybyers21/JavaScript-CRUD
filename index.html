@@ -1,11 +1,20 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
 
     <title>A JavaScript CRUD Bug Tracker</title>
   </head>
@@ -17,27 +26,36 @@
         <form id="issueInputForm">
           <div class="form-group">
             <label for="issueDescInput">Description</label>
-            <input type="text" class="form-control" id="issueDescInput" placeholder="Describe the issue ...">
+            <input
+              type="text"
+              class="form-control"
+              id="issueDescInput"
+              placeholder="Describe the issue ..."
+            />
           </div>
           <div class="form-group">
             <label for="issueDescInput">Severity</label>
-             <select class="form-control" id="issueSeverityInput">
+            <select class="form-control" id="issueSeverityInput">
               <option value="Low">Low</option>
               <option value="Medium">Medium</option>
               <option value="High">High</option>
-            </select> 
+            </select>
           </div>
           <div class="form-group">
             <label for="issueDescInput">Assigned To</label>
-            <input type="text" class="form-control" id="issueAssignedToInput" placeholder="Enter responsible ...">
+            <input
+              type="text"
+              class="form-control"
+              id="issueAssignedToInput"
+              placeholder="Enter responsible ..."
+            />
           </div>
           <button type="submit" class="btn btn-primary">Add</button>
         </form>
       </div>
       <div class="row">
         <div class="col-lg-12">
-          <div id="issuesList">
-          </div>
+          <div id="issuesList"></div>
         </div>
       </div>
       <div class="footer">
@@ -45,11 +63,24 @@
       </div>
     </div>
 
-    <!-- jQuery, Popper.js, Bootstrap JS and Chance JS-->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script src="http://chancejs.com/chance.min.js"></script>
+    <script src="main.js"></script>
 
+    <!-- jQuery, Popper, Bootstrap and Chance -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <script src="http://chancejs.com/chance.min.js"></script>
   </body>
 </html>
